@@ -1,12 +1,12 @@
-import * as esbuild from 'esbuild'
+import * as esbuild from "esbuild";
 
 await esbuild.build({
-  entryPoints: ['src/app.tsx'],
+  entryPoints: ["src/app.tsx"],
   bundle: true,
   minify: true,
-  format: 'cjs',
+  format: "cjs",
   sourcemap: true,
-  outfile: 'dist/output.js',
+  outfile: "dist/output.js",
   // watch: true
-  // external: ['react', 'react-dom'], 
-})
+  // external: ['react', 'react-dom'],
+});
