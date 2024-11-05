@@ -6,7 +6,7 @@ await esbuild.build({
   minify: true,
   format: "cjs",
   sourcemap: true,
-  outfile: "dist/output.js",
+  outfile: "dist/bundle.js",
   // watch: true
   // external: ['react', 'react-dom'],
 });

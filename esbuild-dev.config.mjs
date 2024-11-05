@@ -1,9 +1,9 @@
 import * as esbuild from "esbuild";
 async function watch() {
-  let ctx = await esbuild.context({
+  const ctx = await esbuild.context({
     entryPoints: ["./src/app.tsx"],
     minify: false,
-    outfile: "dist/output.js",
+    outfile: "dist/bundle.js",
     bundle: true,
     loader: { ".ts": "ts" },
   });
