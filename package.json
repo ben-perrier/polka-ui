@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "serve": "npx lite-server",
-    "build": "node esbuild-dev.config.mjs",
-    "start": "concurrently --kill-others \"npm run build\" \"npm run serve\"",
-    "build:prod": "node esbuild-prod.config.mjs",
+    "build": "node ./build/build.js",
+    "start": "node ./build/serve.js",
+    "analyze": "node ./build/analyze.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,14 +14,14 @@
   "dependencies": {
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "esbuild": "^0.24.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
-    "lite-server": "^2.6.1",
-    "serve-static": "^1.16.2"
-  }
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-tsc": "^0.4.0"
+  },
+  "type": "module"
 }

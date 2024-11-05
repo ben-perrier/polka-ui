@@ -1,4 +1,4 @@
-# Iteration 1 - 30 mins
+# Journal
 
 Select a module builder and create a simple typescript react app with `start` and `build` processes
 
@@ -16,3 +16,9 @@ This is not for a react app, switching
 ## Project setup with esbuild react and ts
 
 see https://dev.to/mrinasugosh/react-typescript-app-with-esbuild-1bmo
+
+## Project setup with esbuild react and ts without lite-server
+Lite-server included a vulnerability in a dependency. At the same time esbuild can be used to serve files with a watch with minimal configuration.
+
+See https://eisenbergeffect.medium.com/an-esbuild-setup-for-typescript-3b24852479fe
+
