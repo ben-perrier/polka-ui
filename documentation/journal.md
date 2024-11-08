@@ -22,3 +22,6 @@ Lite-server included a vulnerability in a dependency. At the same time esbuild c
 
 See https://eisenbergeffect.medium.com/an-esbuild-setup-for-typescript-3b24852479fe
 
+## Build react app with docker to fly.io
+See https://fly.io/docs/launch/continuous-deployment-with-github-actions/
+Adapt this with the fly.io create-react-app
