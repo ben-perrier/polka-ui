@@ -14,7 +14,7 @@ await ctx.watch();
 
 const { host, port } = await ctx.serve({
     host: 'localhost',
-  port: 5500,
+  port: 4000,
   servedir: 'dist',
   fallback: "public/index.html"
 });
