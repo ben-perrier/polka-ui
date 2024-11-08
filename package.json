@@ -6,7 +6,9 @@
     "build": "node ./build/build.js",
     "start": "node ./build/serve.js",
     "analyze": "node ./build/analyze.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "prettify":"prettier --write"
   },
   "author": "",
   "license": "ISC",
@@ -19,9 +21,30 @@
     "typescript": "^5.6.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
     "concurrently": "^9.0.1",
     "esbuild": "^0.24.0",
-    "esbuild-plugin-tsc": "^0.4.0"
+    "esbuild-plugin-tsc": "^0.4.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^15.12.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "typescript-eslint": "^8.13.0"
   },
-  "type": "module"
+  "type": "module",
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,prettierrc}": [
+      "eslint --fix --max-warnings=0"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
 }
