@@ -1,48 +1,62 @@
 # Polka
+
 - A React single page app
 - [transpiled from Typescript](https://eisenbergeffect.medium.com/an-esbuild-setup-for-typescript-3b24852479fe)
 - [built with Esbuild](https://eisenbergeffect.medium.com/an-esbuild-setup-for-typescript-3b24852479fe)
-- [deployed using git actions (TBC)](https://fly.io/docs/launch/continuous-deployment-with-github-actions/)
+- [deployed on push using git actions](https://fly.io/docs/launch/continuous-deployment-with-github-actions/)
 - [deployed using a docker image](https://www.youtube.com/watch?v=dfTco9hmXEM)
 
 ## Getting started
 
 ### Install
+
 Install dependencies
+
 ```sh
 npm i
 ```
 
 ### Start in dev or in production
+
 Regenerates the build and starts the app, watching for file changes.
+
 ```sh
 npm start
 ```
 
 ### Build
+
 Creates a minified version of the build translpiled from TS
+
 ```sh
 npm run build
 ```
 
 ### Analyse
+
 Breaks down bundle packages and sizes
+
 ```sh
 npm run analyze
 ```
 
 ## Docker image
+
 The docker image is used to deploy the app to fly.io using github actions.
 See ./DockerFile
 
 ### Build image
+
 Builds an image named `polka` tagged `dev` in this folder `.`
+
 ```sh
 docker build -t polka:dev .
 ```
 
 ### Run image
+
 Runs the image and maps container port 4000 to machine port 4000
+
 ```sh
 docker run -p 4000:4000 polka:dev
 ```
@@ -52,7 +66,9 @@ docker run -p 4000:4000 polka:dev
 Access app at http://localhost:4000 in browser
 
 ### Inspect image
+
 Show all containers:
+
 ```sh
 docker ps
 
@@ -61,8 +77,10 @@ d06f8c66e40a   polka:dev   "docker-entrypoint.s…"   7 minutes ago   Up 2 minut
 ```
 
 Get the container id and use it for:
+
 - docker logs
 - [docker inspect](https://docs.docker.com/reference/cli/docker/inspect/)
+
 ```sh
 docker logs d06f8c66e40a
 docker inspect d06f8c66e40a

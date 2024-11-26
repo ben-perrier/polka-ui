@@ -1,0 +1,26 @@
+# See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
+
+name: Deploy app to fly.io
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-to-fly-dot-io: # See https://github.com/ben-perrier/polka-ui/actions
+    name: Deploy app to fly.io
+    runs-on: ubuntu-latest # it is pretty standard to use ubuntu-latest in the continuous integration world
+    concurrency: deploy-group # optional: ensure only one action runs at a time
+    steps:
+      # See https://github.com/actions/checkout
+      - name: "Checkout github repo"
+        uses: actions/checkout@v4
+
+      # See https://github.com/superfly/flyctl-actions
+      - name: "Install flyctl"
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      # See https://fly.io/docs/flyctl/deploy/
+      - name: "Run flyctl deploy script"
+        run: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
