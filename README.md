@@ -40,6 +40,19 @@ Breaks down bundle packages and sizes
 npm run analyze
 ```
 
+## Deploy to fly.io on push
+
+This repo is set up to deploy the app directly to fly.io whenever code is pushed to the `main` branch.
+This is done using github actions, see https://fly.io/docs/launch/continuous-deployment-with-github-actions/
+
+### Check pipeline
+
+See [github actions section on the repo](https://github.com/ben-perrier/polka-ui/actions/) to check on deployment status and re-run deployment.
+
+### Watch and monitor app deployment
+
+Watch your deployment at https://fly.io/apps/polka-ui/monitoring
+
 ## Docker image
 
 The docker image is used to deploy the app to fly.io using github actions.
