@@ -1,4 +1,7 @@
 #!/usr/bin/env sh
-. "$(dirname "$0")/_/husky.sh"
 
 echo "Pre-push hook"
+echo "App will be deployed to fly.io using git action, follow deployment at https://github.com/ben-perrier/polka-ui/actions/"
+echo "> Github action deployment: https://github.com/ben-perrier/polka-ui/actions/"
+echo "> Fly app activity: https://fly.io/apps/polka-ui/activity"
+echo "> Fly app logs: https://fly.io/apps/polka-ui/monitoring"
