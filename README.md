@@ -1,4 +1,4 @@
-# Polka
+# Polka-ui
 
 - A React single page app
 - [transpiled from Typescript](https://eisenbergeffect.medium.com/an-esbuild-setup-for-typescript-3b24852479fe)
