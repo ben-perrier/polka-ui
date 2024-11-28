@@ -1,7 +1,13 @@
 #!/usr/bin/env sh
 
 echo "Pre-push hook"
+
+# Color ANSI escape codes, see https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+CYAN='\033[0;36m' 
+PURPLE='\033[0;35m' 
+NC='\033[0m' # No Color
+
 echo "App will be deployed to fly.io using git action, follow deployment at https://github.com/ben-perrier/polka-ui/actions/"
-echo "> Github action deployment: https://github.com/ben-perrier/polka-ui/actions/"
-echo "> Fly app activity: https://fly.io/apps/polka-ui/activity"
-echo "> Fly app logs: https://fly.io/apps/polka-ui/monitoring"
+echo "> ${CYAN}Github action deployment:${NC} https://github.com/ben-perrier/polka-ui/actions/"
+echo "> ${PURPLE}Fly app activity:${NC} https://fly.io/apps/polka-ui/activity"
+echo "> ${PURPLE}Fly app logs:${NC} https://fly.io/apps/polka-ui/monitoring"
