@@ -1,0 +1,111 @@
+Run flyctl deploy --remote-only
+  flyctl deploy --remote-only
+  shell: /usr/bin/bash -e {0}
+  env:
+    FLY_API_TOKEN: ***
+==> Verifying app config
+--> Verified app config
+Validating /home/runner/work/polka-ui/polka-ui/fly.toml
+==> Building image
+✓ Configuration is valid
+Waiting for depot builder...
+
+==> Building image with Depot
+--> build:  (​)
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 419B 0.0s done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.2s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:865e5dd094beca432e8c0a1d5e1c465db5f998dca4e439981029b3b81fb39ed5
+#3 resolve docker.io/docker/dockerfile:1@sha256:865e5dd094beca432e8c0a1d5e1c465db5f998dca4e439981029b3b81fb39ed5 done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/node:20-alpine
+#4 DONE 0.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 80B 0.0s done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/node:20-alpine@sha256:b5b9467fe7b33aad47f1ec3f6e0646a658f85f05c18d4243024212a91f3b7554
+#6 resolve docker.io/library/node:20-alpine@sha256:b5b9467fe7b33aad47f1ec3f6e0646a658f85f05c18d4243024212a91f3b7554 done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 188.23kB 0.1s done
+#7 DONE 0.1s
+
+#8 [3/5] COPY package*.json .
+#8 CACHED
+
+#9 [4/5] RUN npm install
+#9 CACHED
+
+#10 [2/5] WORKDIR /app
+#10 CACHED
+
+#11 [5/5] COPY . .
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:029204c2160335a6e20294beebe087a8eb3c70fb022c9e88b5dcfa2458cc7423 done
+#12 exporting config sha256:787489d22c6c3e15d804e01f98c96c43fc2187a5ea6ef273a2bdb7606a35051b done
+#12 pushing layers for registry.fly.io/polka-ui:deployment-01JDSHDZCD8Q9FDX1SREJMXQAQ@sha256:029204c2160335a6e20294beebe087a8eb3c70fb022c9e88b5dcfa2458cc7423
+#12 pushing layer sha256:c27c6df6f17e941a4f2f0e9f32fbd138132c7864ccf33cbcace04a19a5cfce12
+#12 pushing layer sha256:30587b71ea041d39210e7277eeb816e59d87f7d60f6ddb5eea7abb23ac1e6a1d
+#12 pushing layer sha256:3671e96da1f9ed911c4e8fb43bc78c2edf23435eb15b31b589b3ddbf34333804
+#12 pushing layer sha256:460310e50a5f5477e0c7336c5b40f17984d7b9e482dff887fc9afb92fe937a2c
+#12 pushing layer sha256:787489d22c6c3e15d804e01f98c96c43fc2187a5ea6ef273a2bdb7606a35051b
+#12 pushing layer sha256:a47a9e3aba13e6035b90d9e6baedd620e439474aa267e6e7c57580cd7b5a835c
+#12 pushing layer sha256:da9db072f522755cbeb85be2b3f84059b70571b229512f1571d9217b77e1087f
+#12 pushing layer sha256:f294f51744112d58f48fde50702d12184885291925ab6638e8daa323303717b2
+#12 pushing layer sha256:8914c989fa6173869684ab59998d3cbc9d2f963dde87c72b7cc1432befdccf14 0.1s done
+#12 pushing layers for registry.fly.io/polka-ui:deployment-01JDSHDZCD8Q9FDX1SREJMXQAQ@sha256:029204c2160335a6e20294beebe087a8eb3c70fb022c9e88b5dcfa2458cc7423 0.1s done
+#12 pushing layer sha256:c27c6df6f17e941a4f2f0e9f32fbd138132c7864ccf33cbcace04a19a5cfce12 0.1s done
+#12 pushing layer sha256:30587b71ea041d39210e7277eeb816e59d87f7d60f6ddb5eea7abb23ac1e6a1d 0.1s done
+#12 pushing layer sha256:3671e96da1f9ed911c4e8fb43bc78c2edf23435eb15b31b589b3ddbf34333804 0.1s done
+#12 pushing layer sha256:460310e50a5f5477e0c7336c5b40f17984d7b9e482dff887fc9afb92fe937a2c 0.1s done
+#12 pushing layer sha256:787489d22c6c3e15d804e01f98c96c43fc2187a5ea6ef273a2bdb7606a35051b 0.1s done
+#12 pushing layer sha256:a47a9e3aba13e6035b90d9e6baedd620e439474aa267e6e7c57580cd7b5a835c 0.1s done
+#12 pushing layer sha256:da9db072f522755cbeb85be2b3f84059b70571b229512f1571d9217b77e1087f 0.1s done
+#12 pushing layer sha256:f294f51744112d58f48fde50702d12184885291925ab6638e8daa323303717b2 0.1s done
+#12 pushing manifest for registry.fly.io/polka-ui:deployment-01JDSHDZCD8Q9FDX1SREJMXQAQ@sha256:029204c2160335a6e20294beebe087a8eb3c70fb022c9e88b5dcfa2458cc7423
+#12 pushing manifest for registry.fly.io/polka-ui:deployment-01JDSHDZCD8Q9FDX1SREJMXQAQ@sha256:029204c2160335a6e20294beebe087a8eb3c70fb022c9e88b5dcfa2458cc7423 0.4s done
+#12 DONE 0.6s
+--> Build Summary:  (​)
+--> Building image done
+image: registry.fly.io/polka-ui:deployment-01JDSHDZCD8Q9FDX1SREJMXQAQ
+
+Watch your deployment at https://fly.io/apps/polka-ui/monitoring
+
+image size: 88 MB
+Updating existing machines in 'polka-ui' with rolling strategy
+> Acquiring lease for e784431a62e108
+> Acquired lease for e784431a62e108
+> Updating machine config for e784431a62e108
+> Updating e784431a62e108 [app]
+> Updated machine config for e784431a62e108
+> Waiting for machine e784431a62e108 to reach a good state
+> Machine e784431a62e108 reached started state
+
+WARNING The app is not listening on the expected address and will not be reachable by fly-proxy.
+You can fix this by configuring your app to listen on the following addresses:
+  - 0.0.0.0:80
+Found these processes inside the machine with open listening sockets:
+  PROCESS                                                                  | ADDRESSES                           
+---------------------------------------------------------------------------*-------------------------------------
+  /.fly/hallpass                                                           | [fdaa:3:7a7:a7b:8f:4baf:19dc:2]:22  
+  /app/node_modules/@esbuild/linux-x64/bin/esbuild --service=0.24.0 --ping | 0.0.0.0:4000                        
+
+> Running smoke checks on machine e784431a62e108
+> Running machine checks on machine e784431a62e108
+> Checking health of machine e784431a62e108
+✖ Unrecoverable error: timeout reached waiting for health checks to pass for machine e784431a62e108: failed to get VM e784431a62e108: Get "https://api.machines.dev/v1/apps/polka-ui/machines/e784431a62e108": net/http: request canceled
+> Clearing lease for e784431a62e108
+✔ Cleared lease for e784431a62e108
+Error: failed to update machine e784431a62e108: Unrecoverable error: timeout reached waiting for health checks to pass for machine e784431a62e108: failed to get VM e784431a62e108: Get "https://api.machines.dev/v1/apps/polka-ui/machines/e784431a62e108": net/http: request canceled
+Error: Process completed with exit code 1.
