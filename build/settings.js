@@ -1,15 +1,15 @@
-import esbuildPluginTsc from 'esbuild-plugin-tsc';
+import esbuildPluginTsc from "esbuild-plugin-tsc";
 
 export function createBuildSettings(options) {
   return {
-    entryPoints: ['src/app.tsx'],
-    outfile: 'dist/bundle.js',
+    entryPoints: ["src/index.tsx"],
+    outfile: "dist/bundle.js",
     bundle: true,
     plugins: [
       esbuildPluginTsc({
-        force: true
+        force: true,
       }),
     ],
-    ...options
+    ...options,
   };
 }

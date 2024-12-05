@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { createRoot } from "react-dom/client";
+import React, { useCallback, useState } from "react";
 
 const App = (props: { message: string }) => {
   const [count, setCount] = useState(0);
@@ -14,6 +13,5 @@ const App = (props: { message: string }) => {
     </>
   );
 };
-const container = document.getElementById("root")!;
-const root = createRoot(container);
-root.render(<App message={"hello"} />);
+
+export default App;
