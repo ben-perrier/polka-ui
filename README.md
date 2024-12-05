@@ -5,6 +5,7 @@
 - [built with Esbuild](https://eisenbergeffect.medium.com/an-esbuild-setup-for-typescript-3b24852479fe)
 - [deployed on push using git actions](https://fly.io/docs/launch/continuous-deployment-with-github-actions/)
 - [deployed using a docker image](https://www.youtube.com/watch?v=dfTco9hmXEM)
+- [testing with react-testing-library using Vite](https://victorbruce82.medium.com/vitest-with-react-testing-library-in-react-created-with-vite-3552f0a9a19a)
 
 ## Getting started
 
@@ -22,6 +23,20 @@ Regenerates the build and starts the app, watching for file changes.
 
 ```sh
 npm start
+```
+
+### Test
+
+Runs react-testing-library test suite with Vite.
+
+```sh
+npm t
+```
+
+Filter on one test
+
+```sh
+npm t my-test-file
 ```
 
 ### Build

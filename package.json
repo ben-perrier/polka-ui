@@ -6,7 +6,7 @@
     "build": "node ./build/build.js",
     "start": "node ./build/serve.js",
     "analyze": "node ./build/analyze.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "prepare": "husky install",
     "prettify": "prettier --write"
   },
@@ -23,6 +23,9 @@
   "devDependencies": {
     "@eslint/js": "^9.14.0",
     "@flydotio/dockerfile": "^0.5.9",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",
     "concurrently": "^9.0.1",
@@ -35,9 +38,11 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "globals": "^15.12.0",
     "husky": "^9.1.6",
+    "jsdom": "^25.0.1",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "typescript-eslint": "^8.13.0"
+    "typescript-eslint": "^8.13.0",
+    "vitest": "^2.1.8"
   },
   "type": "module",
   "lint-staged": {
