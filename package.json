@@ -8,7 +8,8 @@
     "analyze": "node ./build/analyze.js",
     "test": "vitest",
     "prepare": "husky install",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "test-changes": "npx vitest --changed origin/main"
   },
   "author": "",
   "license": "ISC",
